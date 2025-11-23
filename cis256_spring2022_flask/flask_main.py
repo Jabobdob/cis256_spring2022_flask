@@ -125,7 +125,10 @@ def search_router(searchtype):
         byauthorform = ByAuthorIdWTF()
         return render_template('byauthor.html', form=byauthorform)
     elif searchtype == 'byTitle':
-        return "You Choose by Title"
+         
+         # just load the simple title form (string field)
+         form = ByTitleWTF()
+         return render_template('bytitle.html', form=form)
 
     elif searchtype == 'byPublisher':
         
