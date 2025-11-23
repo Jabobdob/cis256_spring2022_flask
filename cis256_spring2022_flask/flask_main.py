@@ -126,8 +126,20 @@ def search_router(searchtype):
         return render_template('byauthor.html', form=byauthorform)
     elif searchtype == 'byTitle':
         return "You Choose by Title"
+
     elif searchtype == 'byPublisher':
-        return "You Choose by Publisher"
+        
+        # kinda doing the same thing as author but for publishers
+        form = ByPublisherIdWTF()
+        db = BooksDB()
+
+        # this gets list of publishers from the db (its tuples)
+        pubs = db.getpublishers()
+        form.publisher_choice.choices = pubs
+        
+        # show the template
+        return render_template('bypublisher.html', form=form)
+    
 
 
 @app.route('/results/<option>', methods=['POST'])
