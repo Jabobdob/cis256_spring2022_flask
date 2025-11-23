@@ -1,0 +1,16 @@
+<!-- just making a really simple table for the publisher results -->
+<table border="1">
+    <tr>
+        <th>Title</th>
+        <th>Year</th>
+        <th>Pages</th>
+    </tr>
+
+    {% for b in data %}
+    <tr>
+        <td>{{ b['title'] }}</td>
+        <td>{{ b['year'] }}</td>
+        <td>{{ b['pages'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
