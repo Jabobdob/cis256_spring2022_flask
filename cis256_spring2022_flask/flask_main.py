@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, url_for, redirect, session
 from string import Template
 from loginwtf import LoginWTF
-from searchwtf import SearchWTF,ByAuthorIdWTF
+from searchwtf import SearchWTF,ByAuthorIdWTF, ByPublisherIdWTF
 from booksdb import BooksDB
 from flask_session import Session
 from flask_bcrypt import Bcrypt
