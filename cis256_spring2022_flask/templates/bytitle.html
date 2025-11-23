@@ -1,0 +1,8 @@
+<!-- really simple title search form -->
+<form method="POST" action="/results/booksbytitle">
+    {{ form.hidden_tag() }}
+
+    <p>{{ form.title_string.label }} {{ form.title_string() }}</p>
+
+    <p>{{ form.submit() }}</p>
+</form>
