@@ -20,6 +20,7 @@ class ByPublisherIdWTF(FlaskForm):
     submit = SubmitField("Go")
 
 class ByTitleWTF(FlaskForm):
-    # This will also need a stringfield for the words the user types
-    pass
+    # just a simple text box for typing part of a title
+    title_string = StringField("Enter Part of a Title:")
+    submit = SubmitField("Search")
 
