@@ -14,8 +14,10 @@ class ByAuthorIdWTF(FlaskForm):
     author_choice = SelectField("AuthorChoice", choices=authors)
 
 
+# this is for picking a publisher. similar to the author one
 class ByPublisherIdWTF(FlaskForm):
-    pass
+    publisher_choice = SelectField("Pick a Publisher:", choices=[], coerce=int)
+    submit = SubmitField("Go")
 
 class ByTitleWTF(FlaskForm):
     # This will also need a stringfield for the words the user types

@@ -1,0 +1,8 @@
+<!-- kind of based off the byauthor page, but for publishers -->
+<form method="POST" action="/results/booksbypublisherid">
+    {{ form.hidden_tag() }}
+
+    <p>{{ form.publisher_choice.label }} {{ form.publisher_choice() }}</p>
+
+    <p>{{ form.submit() }}</p>
+</form>
